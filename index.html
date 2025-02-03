@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Expense Tracker | Manage Your Finances with Ease</title>
+    <meta name="description"
+      content="Expense Tracker helps you log expenses and income, categorize transactions, and visualize your spending habits to achieve financial stability.">
+    <meta name="keywords"
+      content="expense tracker, budgeting, finance management, income tracking, expense logging, personal finance, financial planning">
+    <meta name="author" content="Your Name">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Expense Tracker">
+    <meta property="og:description"
+      content="A powerful tool to manage your finances, track expenses, and stay within your budget.">
+    <meta property="og:image" content="expense-tracker.jpg">
+    <meta property="og:url"
+      content="http://localhost/expense-tracker/index.html">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicons -->
+    <link href="assets/img/1.png" rel="icon">
+    <link href="assets/img/1.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Manifest JSON File -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Meta tags for PWA -->
+    <meta name="theme-color" content="#2487ce">
+
+    <!-- =======================================================
+  * Website Name: Expense Tracker | Manage Your Finances with Ease
+  * Website URL: http://localhost/expense-tracker/index.html
+  * Created: Feb 02 2025 with Bootstrap v5.3.3
+  * Author: Your Name
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="index-page">
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          // Check if the browser supports notifications
+          if (!("Notification" in window)) {
+              alert("This browser does not support notifications.");
+              return;
+          }
+
+          // Request permission from the user
+          Notification.requestPermission().then(permission => {
+              if (permission === "granted") {
+                  // Send a notification
+                  new Notification("Hello!", {
+                      body: "Welcome to the website!",
+                      icon: "https://via.placeholder.com/100", // Example icon
+                      vibrate: [200, 100, 200], // Vibration pattern
+                  });
+              } else {
+                  alert("You have blocked notifications.");
+              }
+          });
+      });
+  </script>
+    <!-- Offline Notification Bar -->
+    <div id="offline-notification" style="display: none;">
+      You're Offline
+    </div>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center">
+        <!-- Logo -->
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/1.png" alt>
+          <h1 class="sitename">Expense Tracker</h1>
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="features.html">Features</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <!-- Hero Section -->
+      <section id="hero" class="hero section">
+        <!-- Hero Background Image -->
+        <img
+          src="assets/img/DALL·E 2025-02-01 15.01.52 - A modern, minimalistic banner image for an ExpenseTracker web application. The scene features a sleek digital dashboard with upward-trending graphs an.webp"
+          alt data-aos="fade-in" class>
+        <div class="container">
+          <div class="row justify-content-center" data-aos="zoom-out">
+            <div class="col-xl-7 col-lg-9 text-center">
+              <h1>Your Expenses, Your Control. Take Charge Today!</h1>
+              <p>Track your income and expenses, visualize your spending habits,
+                and achieve financial stability with Expense Tracker.</p>
+            </div>
+          </div>
+          <div class="text-center" data-aos="zoom-out" data-aos-delay="100">
+            <a href="features.html" class="btn-get-started">Get Started</a>
+          </div>
+          <!-- 4 Features -->
+          <div class="row gy-4 mt-5">
+            <div class="col-md-6 col-lg-3" data-aos="zoom-out"
+              data-aos-delay="100">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-cash"></i></div>
+                <h4 class="title"><a href="features.html">Income & Expense
+                    Logging</a></h4>
+                <p class="description">Easily log your income and expenses with
+                  categories like Food, Transport, and Entertainment.</p>
+              </div>
+            </div><!--End Icon Box -->
+            <div class="col-md-6 col-lg-3" data-aos="zoom-out"
+              data-aos-delay="200">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-bar-chart"></i></div>
+                <h4 class="title"><a href="features.html">Spending
+                    Visualization</a></h4>
+                <p class="description">Visualize your spending habits with
+                  charts and summaries for better financial insights.</p>
+              </div>
+            </div><!--End Icon Box -->
+            <div class="col-md-6 col-lg-3" data-aos="zoom-out"
+              data-aos-delay="300">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-wallet2"></i></div>
+                <h4 class="title"><a href="features.html">Budget
+                    Tracking</a></h4>
+                <p class="description">Set monthly budgets and get notified when
+                  you exceed your limits.</p>
+              </div>
+            </div><!--End Icon Box -->
+            <div class="col-md-6 col-lg-3" data-aos="zoom-out"
+              data-aos-delay="400">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-download"></i></div>
+                <h4 class="title"><a href="features.html">Export Data</a></h4>
+                <p class="description">Export your financial data as a CSV file
+                  for further analysis.</p>
+              </div>
+            </div><!--End Icon Box -->
+          </div>
+        </div>
+      </section><!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Us</h2>
+          <p>Expense Tracker empowers users to manage their finances with ease
+            and precision.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-6 content" data-aos="fade-up"
+              data-aos-delay="100">
+              <p>
+                At Expense Tracker, we are committed to helping individuals take
+                control of their finances. Whether you’re just starting to
+                manage your budget or looking to optimize your spending, our
+                platform offers the tools you need to track income, expenses,
+                and savings effectively.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> <span>Visualize your
+                    spending habits with clear charts and summaries.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Track your income
+                    and expenses across categories like Food, Transport, and
+                    Entertainment.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Set monthly
+                    budgets and receive notifications when you exceed your
+                    limits.</span></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <p>
+                Whether you're saving for a big goal, managing daily expenses,
+                or simply trying to stay within your budget, Expense Tracker
+                provides a comprehensive solution for all your financial needs.
+                Our user-friendly interface, personalized insights, and powerful
+                tools ensure that you stay on top of your finances and achieve
+                financial stability with confidence.
+              </p>
+              <a href="about-us.html" class="read-more"><span>Read More</span><i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </section><!-- /About Section -->
+
+      <!-- Faq Section -->
+      <section id="faq" class="faq section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Your Financial Questions Answered</h2>
+          <p>Clear guidance to help you make the most of your financial
+            journey</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+              <div class="faq-container">
+                <div class="faq-item">
+                  <h3>How do I install the Expense Tracker app?</h3>
+                  <div class="faq-content">
+                    <p>You can install the app by clicking the
+                      "Add to Home Screen" option in your browser. The app
+                      includes a manifest file that ensures it works like a
+                      native app on your device.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>Can I use the app offline?</h3>
+                  <div class="faq-content">
+                    <p>Yes! The app uses Service Workers and Cache API to enable
+                      offline access. You can log expenses and income even
+                      without an internet connection, and your data will sync
+                      automatically when you're back online.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>Does the app use any native device features?</h3>
+                  <div class="faq-content">
+                    <p>Yes! The app integrates geolocation to tag expenses with
+                      location data (optional) and push notifications to remind
+                      you of upcoming bills or budget limits.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>How do I navigate between sections?</h3>
+                  <div class="faq-content">
+                    <p>The app has three main views: Home, About, and Features.
+                      You can navigate between them using the menu in the header
+                      or footer.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>Is my financial data secure?</h3>
+                  <div class="faq-content">
+                    <p>We use bank-grade encryption to protect your data. Your
+                      information is stored locally on your device and never
+                      shared without your consent. <a href="/privacy">Read our
+                        security policy</a>.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>What if I need help with the app?</h3>
+                  <div class="faq-content">
+                    <p>You can reach out to our support team anytime through the
+                      contact page. We’re here to help you with any questions or
+                      issues you may have.</p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div><!-- End Faq item-->
+              </div>
+            </div><!-- End Faq Column-->
+          </div>
+        </div>
+      </section><!-- /Faq Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact Us</h2>
+          <p>Need help with Expense Tracker? Reach out to us, and we’ll get back
+            to you as soon as possible.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+            <!-- Google Maps Embed -->
+            <iframe style="border:0; width: 100%; height: 270px;"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+              frameborder="0" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div><!-- End Google Maps -->
+
+          <div class="row gy-4">
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+              <div class="info-item d-flex" data-aos="fade-up"
+                data-aos-delay="300">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>123 Finance Lane, Suite 200<br>New York, NY 10001</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up"
+                data-aos-delay="400">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+1 (123) 456-7890</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up"
+                data-aos-delay="500">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>support@expensetracker.com</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+              <form action="forms/contact.php" method="post"
+                class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control"
+                      placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email"
+                      placeholder="Your Email" required>
+                  </div>
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="subject"
+                      placeholder="Subject" required>
+                  </div>
+                  <div class="col-md-12">
+                    <textarea class="form-control" name="message" rows="6"
+                      placeholder="Message" required></textarea>
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank
+                      you!</div>
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div><!-- End Contact Form -->
+          </div>
+        </div>
+      </section><!-- /Contact Section -->
+
+    </main>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <!-- Company Info -->
+          <div class="col-lg-5 col-md-12 footer-about">
+            <div class="social-links d-flex mt-4">
+              <a href="#" aria-label="LinkedIn Profile"><i
+                  class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Twitter Profile"><i
+                  class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="YouTube Channel"><i
+                  class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Instagram Profile"><i
+                  class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About</a></li>
+              <li><a href="features.html">Features</a></li>
+            </ul>
+          </div>
+          <!-- Services -->
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Features</h4>
+            <ul>
+              <li><a href="features.html">Income & Expense
+                  Logging</a></li>
+              <li><a href="features.html">Spending
+                  Visualization</a></li>
+              <li><a href="features.html">Budget Tracking</a></li>
+              <li><a href="features.html">Export Data</a></li>
+              <li><a href="features.html">Offline Support</a></li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div
+            class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>Financial Support Center</p>
+            <p>123 Finance Lane</p>
+            <p>Suite 200</p>
+            <p class="mt-3">
+              <strong>Phone:</strong><br>
+              <a href="tel:+11234567890" class="text-nowrap">+1 (123)
+                456-7890</a>
+            </p>
+            <p>
+              <strong>Email:</strong><br>
+              <a
+                href="mailto:support@expensetracker.com">support@expensetracker.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright -->
+      <div class="container copyright text-center mt-4">
+        <p>
+          Copyright © <span id="currentYear"></span>
+          <strong class="px-1 sitename">Expense Tracker</strong>
+          <br>All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>

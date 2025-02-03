@@ -1,0 +1,16 @@
+{
+  "name": "Expense Tracker",
+  "short_name": "ET",
+  "description": "Empowering users to manage their finances with ease and precision.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2487ce",
+  "icons": [
+    {
+      "src": "assets/img/1.png",
+      "sizes": "219x219",
+      "type": "image/png"
+    }
+  ]
+}

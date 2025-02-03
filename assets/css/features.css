@@ -1,0 +1,273 @@
+/* Main Content Styling */
+.main {
+  position: relative; /* Required for positioning child elements */
+  min-height: 900px; /* Ensure the main content takes up full viewport height */
+  padding-bottom: 70px; /* Add space at the bottom for the sticky menu */
+}
+
+/* Menu Bar & Buttons */
+.button-container {
+  position: fixed; /* Fixed position for sticky behavior */
+  right: 20px; /* Align to the right side of the page */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact vertical centering */
+  width: 60px; /* Fixed width for a compact column layout */
+  display: flex;
+  flex-direction: column; /* Arrange buttons in a column */
+  align-items: center; /* Center buttons horizontally */
+  justify-content: space-around; /* Space between buttons */
+  background-color: #1b85db; /* Background color */
+  border-radius: 50px; /* Rounded corners */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -4px 10px,
+    rgba(27, 133, 219, 0.3) 0px -8px 12px; /* Softer glow effect */
+  z-index: 1000; /* Ensure it stays on top */
+  padding: 15px 0; /* Add padding for spacing between buttons */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.button {
+  width: 50px; /* Fixed size for buttons */
+  height: 50px; /* Fixed size for buttons */
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline for links */
+  margin: 5px 0; /* Add space between buttons */
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Add hover effect */
+  color: white;
+}
+
+/* Focus State */
+.button:focus {
+  transform: translateX(-10px); /* Move the button upward */
+  background-color: #fff; /* White background for the button */
+  outline: none; /* Remove default focus outline */
+}
+
+.button:focus i {
+  color: rgb(27, 133, 219); /* Change the icon color to the specified color */
+}
+
+.icon {
+  font-size: 24px; /* Increase icon size for better visibility */
+}
+
+.button-container a i {
+  font-size: 24px;
+  color: #ffffff; /* White color for dark backgrounds */
+}
+
+/* Toggle Button Styling */
+.toggle-button-container {
+  position: fixed;
+  right: 20px;
+  top: 130px;
+  z-index: 1000;
+}
+
+.toggle-button-container button {
+  width: 50px;
+  height: 50px;
+  font-size: 24px; /* Adjust hamburger icon size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%; /* Circular shape */
+  background-color: #1b85db; /* Match your theme color */
+  color: white; /* Icon/text color */
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -4px 10px, #1b85db4d 0px -8px 12px; /* Softer glow effect */
+  transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+/* Divs Container */
+.content div {
+  display: none; /* Hide all divs by default */
+}
+
+.content div.active {
+  display: block; /* Show the active div */
+}
+
+/* Common styles for login and signup forms */
+#login,
+#signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields styling */
+#login input,
+#signup input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button styling */
+#login button,
+#signup button {
+  width: 45%;
+  padding: 5px;
+  background: #007bff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#login button:hover,
+#signup button:hover {
+  background: #0056b3;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  #login,
+  #signup {
+    width: 95%;
+    max-width: 350px;
+    padding: 15px;
+  }
+
+  #login input,
+  #signup input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #login button,
+  #signup button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #login,
+  #signup {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  #login input,
+  #signup input {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  #login button,
+  #signup button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Center-align text and elements */
+.text-center {
+  text-align: center;
+}
+
+/* Strong tag styling for better readability */
+.text-center strong {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+/* Input fields styling */
+.text-center input {
+  display: inline-block;
+  width: auto;
+  min-width: 120px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Readonly input field styling */
+#display-username {
+  background-color: #f8f9fa;
+  color: #333;
+  cursor: not-allowed;
+}
+
+/* Update Salary Button */
+#update-salary {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#update-salary:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-center strong {
+    font-size: 14px;
+  }
+
+  .text-center input {
+    width: 100%;
+    max-width: 250px;
+    font-size: 14px;
+  }
+
+  #update-salary {
+    margin-top: 5px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-center strong {
+    font-size: 13px;
+  }
+
+  .text-center input {
+    max-width: 200px;
+    font-size: 13px;
+  }
+
+  #update-salary {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  h2 {
+    margin-top: 20px;
+  }
+}
