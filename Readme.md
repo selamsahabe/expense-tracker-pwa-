@@ -62,12 +62,12 @@ A full-stack PWA that enables users to:
   - Expense categorization
   - Monthly trend analysis
   - Profit/Loss
-- Automated Insights:
-  - Weekly spending forecasts
+- Automading forecasts
   - Budget utilization percentages
 
 ### 4. Offline-First Architecture
-- Service Worker strategies:
+- Service Worker stted Insights:
+  - Weekly spenrategies:
   - Cache-first for static assets
   - Network-first for API calls
   - Background sync for failed requests
