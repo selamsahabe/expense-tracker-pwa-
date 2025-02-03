@@ -111,7 +111,7 @@ A full-stack PWA that enables users to:
 ### Steps
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/expense-tracker-pwa.git
+git clone https://github.com/selamsahabe/expense-tracker-pwa.git
 cd expense-tracker-pwa
 
 # 2. Start development server
